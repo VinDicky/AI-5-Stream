@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Usage Prediction</title>
+</head>
+<body>
+    <h2>Input Parameters</h2>
+    <form action="/predict" method="post">
+        <label for="land_area">Luas Lahan(ha):</label>
+        <input type="text" id="land_area" name="land_area" required><br>
+
+        <label for="water_capacity">Kapasitas Air(m3):</label>
+        <input type="text" id="water_capacity" name="water_capacity" required><br>
+
+        <label for="soil_moisture">Kelembapan Tanah(%):</label>
+        <input type="text" id="soil_moisture" name="soil_moisture" required><br>
+
+        <label for="rainfall">Curah Hujan(mm):</label>
+        <input type="text" id="rainfall" name="rainfall" required><br>
+
+        <label for="days">Hari:</label>
+        <input type="text" id="days" name="days" required><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

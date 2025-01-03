@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Results</title>
+</head>
+<body>
+    <h1>Prediction Results</h1>
+    
+    <h2>Input Parameters</h2>
+    <table>
+        <tr>
+            <th>Luas Lahan</th>
+            <td>{{ land_area }}</td>
+        </tr>
+        <tr>
+            <th>Kapasitas Air</th>
+            <td>{{ water_capacity }}</td>
+        </tr>
+        <tr>
+            <th>Kelembapan Tanah</th>
+            <td>{{ soil_moisture }}</td>
+        </tr>
+        <tr>
+            <th>Curah Hujan</th>
+            <td>{{ rainfall }}</td>
+        </tr>
+        <tr>
+            <th>Hari</th>
+            <td>{{ days }}</td>
+        </tr>
+    </table>
+
+<h2>Predicted Water Capacity (m3)</h2>
+<p>{{ prediction }}</p>
+    
+    <h2>Performance Matrix</h2>
+    <table>
+        <tr>
+            <th>Metric</th>
+            <th>Value</th>
+        </tr>
+        <tr>
+            <td>Accuracy</td>
+            <td>{{ accuracy }}</td>
+        </tr>
+        <tr>
+            <td>Precision</td>
+            <td>{{ precision }}</td>
+        </tr>
+        <tr>
+            <td>Recall</td>
+            <td>{{ recall }}</td>
+        </tr>
+        <tr>
+            <td>F1 Score</td>
+            <td>{{ f1_score }}</td>
+        </tr>
+    </table>
+    <a href="/">Go Back</a>
+</body>
+</html>
